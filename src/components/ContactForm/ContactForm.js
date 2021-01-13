@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './ContactForm.css';
 
 export default class ContactForm extends Component {
+  static defaultProps = {};
+
+  static propTypes = {
+    contacts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      }),
+    ),
+  };
+
   state = {
     name: '',
     number: '',
@@ -35,7 +49,7 @@ export default class ContactForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="form">
         <label className="form-label">
-          name
+          Name
           <input
             className="form-input"
             type="name"

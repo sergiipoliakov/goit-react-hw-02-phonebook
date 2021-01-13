@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Filter({ value, onChangeFilter }) {
   return (
@@ -15,3 +15,14 @@ export default function Filter({ value, onChangeFilter }) {
     </div>
   );
 }
+
+Filter.defaultProps = {
+  value: 'noName',
+  number: '123 45 67',
+};
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+
+  onChangeFilter: PropTypes.func,
+};

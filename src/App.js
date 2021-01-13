@@ -34,7 +34,6 @@ export default class App extends Component {
     };
 
     this.setState(prevState => {
-      console.log(prevState.contacts);
       return {
         contacts: [...prevState.contacts, contact],
       };

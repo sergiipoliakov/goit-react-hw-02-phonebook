@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactListItem = ({ id, name, number, onRemove }) => (
   <li key={id} className="ContactList-item">
@@ -13,3 +13,15 @@ const ContactListItem = ({ id, name, number, onRemove }) => (
 );
 
 export default ContactListItem;
+
+ContactListItem.defaultProps = {
+  name: 'noName',
+  number: '123 45 67',
+};
+
+ContactListItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onRemove: PropTypes.func,
+};
