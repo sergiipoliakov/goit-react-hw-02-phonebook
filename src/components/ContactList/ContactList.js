@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 import ContactListItem from '../ContactListItem/ContactListItem';
-import './ContactList.css';
 
 const ContactList = ({ contacts, onRemoveContact }) => (
   <ul className="ContactList">

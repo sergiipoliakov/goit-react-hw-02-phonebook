@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './ContactForm.css';
-
 export default class ContactForm extends Component {
   static defaultProps = {};
 

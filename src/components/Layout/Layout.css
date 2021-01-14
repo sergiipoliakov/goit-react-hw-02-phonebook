@@ -1,8 +1,13 @@
 .Layout {
-  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 12px;
   padding-right: 12px;
-  border: 1px solid red;
+
+  /* background: #e1efff; */
 }
